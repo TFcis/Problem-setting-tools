@@ -1,14 +1,4 @@
 <?php
-function getstdinline(){
-	$text=fgets(STDIN);
-	$text=substr($text,0,-2);
-	return $text;
-}
-function getfoldername($text){
-	if($text[0]=="\"")$text=substr($text,1,-1);
-	if($text[strlen($text)-1]=="\\")$text=substr($text,0,-1);
-	return $text;
-}
 echo "Output folder >";
 $folder = trim(fgets(STDIN));
 mkdir($folder);
@@ -46,9 +36,7 @@ foreach ($filecheck as $key => $value) {
 		echo "find ".$key.".out but ".$key.".in is missing. ignored\n";
 	}
 }
-var_dump($indexlist);
 asort($indexlist);
-var_dump($indexlist);
 $conf = new stdClass;
 $conf->timelimit = $timelimit;
 $conf->memlimit = $memlimit;
