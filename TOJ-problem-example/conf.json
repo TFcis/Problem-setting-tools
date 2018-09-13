@@ -7,5 +7,6 @@
 	"test":[
 		{"data":[1],"weight":99	},
 		{"data":[2],"weight":1	}
-	]
+	],
+	"metadata":{}
 }
